@@ -1,17 +1,37 @@
 {
-  "name": "react-blog",
+  "name": "react-ydt-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "classnames": "^2.2.6",
+    "gatsby-plugin-react-helmet": "^3.1.2",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "pickerjs": "^1.2.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.1",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "3.0.1",
+    "react-use-form-state": "^0.10.4",
+    "svg4everybody": "^2.1.9",
+    "swiper": "^4.5.0",
+    "uniqid": "^5.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +47,37 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "css-loader": "^2.1.1",
+    "enzyme": "^3.10.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.8.6"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "NODE_ENV=production lint-staged"
+    }
   }
 }

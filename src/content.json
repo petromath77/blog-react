@@ -1,0 +1,28 @@
+{
+  "navItemLinks": [
+    {
+      "name": "Band",
+      "href": "/band"
+    },
+    {
+      "name": "Music",
+      "href": "/music"
+    },
+    {
+      "name": "Tour",
+      "href": "/tour"
+    },
+    {
+      "name": "Gallery",
+      "href": "/gallery"
+    },
+    {
+      "name": "Contact",
+      "href": "/contact"
+    },
+    {
+      "name": "Blog",
+      "href": "/blog"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+@import "../../styles/includes/includes";
+
+.hero {
+  background-image: radial-gradient(
+      circle farthest-corner at 50% 100%,
+      rgba(0, 0, 0, 0.46) 1%,
+      rgba(0, 0, 0, 0.82) 91%
+    ),
+    url("./images/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 105px 0;
+  text-align: center;
+}

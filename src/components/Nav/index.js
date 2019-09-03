@@ -27,7 +27,14 @@ const Nav = props => {
   const [open, setOpen] = useState(false);
 
   const links = content.navItemLinks.map(link => {
-    return <NavItem mobile={mobile} link={link} key={uniqueId()} />;
+    return (
+      <NavItem
+        mobile={mobile}
+        link={link}
+        key={uniqueId()}
+        onClick={() => setOpen(false)}
+      />
+    );
   });
 
   return (

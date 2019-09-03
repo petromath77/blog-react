@@ -2,7 +2,7 @@
   "navItemLinks": [
     {
       "name": "Band",
-      "href": "/band"
+      "href": "/bio"
     },
     {
       "name": "Music",
@@ -23,6 +23,40 @@
     {
       "name": "Blog",
       "href": "/blog"
+    }
+  ],
+  "homeHero": [
+    "We just released our new album",
+    "EQUILIBRIUM",
+    "Check it out",
+    "Watch us live",
+    "/music",
+    "/tour"
+  ],
+  "social": [
+    {
+      "icon": "facebook",
+      "url": "/images/social-sprite.svg",
+      "viewBox": "0 0 16 16",
+      "path": "https://facebook.com"
+    },
+    {
+      "icon": "twitter",
+      "url": "/images/social-sprite.svg",
+      "viewBox": "0 0 16 16",
+      "path": "https://twitter.com"
+    },
+    {
+      "icon": "youtube",
+      "url": "/images/social-sprite.svg",
+      "viewBox": "0 0 16 16",
+      "path": "https://youtube.com"
+    },
+    {
+      "icon": "vivo",
+      "url": "/images/social-sprite.svg",
+      "viewBox": "0 0 16 16",
+      "path": "https://vevo.com"
     }
   ]
 }

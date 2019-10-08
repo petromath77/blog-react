@@ -12,6 +12,7 @@ import './styles/global.scss';
 import Header from './components/Header/index';
 import Home from './pages/Home';
 import Band from './pages/Band';
+import Music from './pages/Music';
 
 // Override styles / Top level styles
 import './styles/override/override.scss';
@@ -21,8 +22,13 @@ const App = () => {
     <>
       <Header />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route
+          exact
+          path="/"
+          render={props => <Home {...props} classadd="some" />}
+        />
         <Route exact path="/bio" component={Band} />
+        <Route exact path="/music" component={Music} />
       </Switch>
     </>
   );

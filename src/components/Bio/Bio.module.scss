@@ -1,7 +1,5 @@
 @import "../../styles/includes/includes";
 
 .wrapper {
-  @include font(300);
-  color: $white;
   margin: 60px 0 20px;
 }

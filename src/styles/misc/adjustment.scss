@@ -19,8 +19,10 @@ html {
 
 html,
 body {
-  @include font(400);
+  @include font(300);
   width: 100%;
+  color: $white;
+  font-size: 14px;
 }
 
 body {

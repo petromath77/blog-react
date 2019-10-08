@@ -13,6 +13,7 @@ import Header from './components/Header/index';
 import Home from './pages/Home';
 import Band from './pages/Band';
 import Music from './pages/Music';
+import Tour from './pages/Tour';
 
 // Override styles / Top level styles
 import './styles/override/override.scss';
@@ -29,6 +30,7 @@ const App = () => {
         />
         <Route exact path="/bio" component={Band} />
         <Route exact path="/music" component={Music} />
+        <Route exact path="/tour" component={Tour} />
       </Switch>
     </>
   );

@@ -3,33 +3,28 @@ import uniqueId from 'uniqid';
 import styles from './Tour.module.scss';
 import content from '../../content';
 
-const MusicItem = props => {
-  const { item, title } = props;
+const TourItem = props => {
+  const { item } = props;
 
   return (
-    <li className={styles.album}>
-      <div className={styles.album_head}>
-        <span className="subhead">Album</span>
-        <h3 className={styles.album_title}>{title}</h3>
-      </div>
-      <ul>
-        {Object.values(item)[0].map(subitem => (
-          <li className={styles.song} key={uniqueId()}>
-            <span className={styles.song_title}>{subitem.song}</span>
-            <span className="subhead">{title}</span>
-            <span className={styles.duration}>{subitem.duration}</span>
-          </li>
-        ))}
-      </ul>
-    </li>
+    <>
+      {Object.values(item)[0].map(subitem => (
+        <li className={styles.item} key={uniqueId()}>
+          <span className={styles.date}>{subitem.date}</span>
+          <span className={styles.place}>{subitem.place}</span>
+          <span className={styles.city}>{subitem.city}</span>
+          <button type="button"className={`${styles.btn} btn`}>{subitem.ticket}</button>
+        </li>
+      ))}
+    </>
   );
 };
 
-const MusicList = () => {
+const TourList = () => {
   return (
-    <ul className={styles.albums}>
-      {content.albums.map(item => (
-        <MusicItem item={item} title={Object.keys(item)[0]} key={uniqueId()} />
+    <ul className={styles.tours}>
+      {content.tour.map(item => (
+        <TourItem item={item} title={Object.keys(item)[0]} key={uniqueId()} />
       ))}
     </ul>
   );
@@ -40,10 +35,10 @@ const Tour = () => {
     <>
       <div className={`${styles.wrapper}`}>
         {content.tour.map(item => (
-          <h2 className="title">{Object.keys(item)[0]}</h2>
+          <h2 className={`${styles.title} title`} key={uniqueId()}>{Object.keys(item)[0]}</h2>
         ))}
         <div>
-          <MusicList />
+          <TourList />
         </div>
       </div>
     </>

@@ -1,1 +1,36 @@
 @import "../../styles/includes/includes";
+
+.title {
+    margin-bottom: 90px;
+}
+
+.tours {
+    margin-bottom: 100px;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px 30px 15px 0;
+    border-top: 1px solid $song_border;
+    width: 100%;
+    text-align: left;
+}
+
+.date {
+    width: 20%;
+}
+
+.place {
+    font-weight: 700;
+    width: 40%;
+}
+
+.city {
+    width: 28%;
+}
+
+.btn {
+    padding: 7px 20px;
+    width: 12%;
+}
